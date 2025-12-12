@@ -14,3 +14,28 @@ The goal of this project is to use PySpark to:
     - Analyze patterns between the two selected airlines (AA and DL)
 
 This project demonstrates practical skills in handling large datasets and extracting insights using PySpark.
+
+# Dataset Description
+
+The dataset contains U.S. domestic flight records with information about:
+
+    - Date, time, airline codes
+    - Departure and arrival delays
+    - Distance
+    - Cancellation and diversion status
+
+Columns Dropped
+To simplify analysis, the following columns were removed because they are not required:
+
+    - MKT_CARRIER_FL_NUM
+    - OP_UNIQUE_CARRIER
+    - TAIL_NUM
+    - ORIGIN_AIRPORT_ID
+    - DEST_AIRPORT_ID
+
+Subset Used
+Only flights from two airlines were included:
+- American Airlines (AA)
+- Delta Airlines (DL)
+
+This filtered the dataset to 15,006,877 rows.
