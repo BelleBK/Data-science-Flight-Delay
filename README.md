@@ -50,4 +50,28 @@ Drop some column :
     cols_to_drop = ["MKT_CARRIER_FL_NUM", "OP_UNIQUE_CARRIER", "TAIL_NUM", "ORIGIN_AIRPORT_ID", "DEST_AIRPORT_ID"]
     df = df.drop(*cols_to_drop)
 
+Filtering Operations :
+Multiple queries were implemented to extract subsets of interest.
+
+Key Findings:
+
+    - Flights with departure delay > 30 minutes: 1,529,331 flights (10.19%)
+    - Cancelled flights: 330,196 flights (2.20%)
+    - Flights with arrival or departure delay > 60 minutes: 968,754 flights (6.46%)
+
+These insights reflect that while cancellation rates remained relatively low, moderate to severe delays were common.
+
+Advanced Quarterly Delay Analysis (2020–2024)
+
+To understand seasonal patterns, the average departure delay was calculated for each airline × quarter × year combination.
+
+Key Observations Based on the Line Graph:
+
+    -- AA consistently shows higher delay levels than DL across most quarters.
+    -- The year 2021 showed a sharp rise in delays for both airlines, with AA peaking significantly in 2021-Q3.
+    -- DL remained more stable but experienced noticeable increases in 2022-Q2 and 2023-Q3.
+    -- AA reached its highest levels in 2023-Q3 to 2024-Q3, approaching nearly 20 minutes average delay.
+    -- DL displayed a milder trend with smaller fluctuations.
+
+These patterns suggest that AA experienced greater operational disruptions relative to DL, particularly during high-travel seasons and post-pandemic recovery periods.
 
