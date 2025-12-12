@@ -39,3 +39,15 @@ Only flights from two airlines were included:
 - Delta Airlines (DL)
 
 This filtered the dataset to 15,006,877 rows.
+
+# Data Cleaning and Preparation
+Filtering for AA and DL :
+
+    df = df.filter(df.MKT_UNIQUE_CARRIER.isin("AA", "DL"))
+
+Drop some column :
+
+    cols_to_drop = ["MKT_CARRIER_FL_NUM", "OP_UNIQUE_CARRIER", "TAIL_NUM", "ORIGIN_AIRPORT_ID", "DEST_AIRPORT_ID"]
+    df = df.drop(*cols_to_drop)
+
+
